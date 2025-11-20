@@ -7,18 +7,12 @@ public:
     vector<int> replaceElements(vector<int>& arr) {
         int n = arr.size();
         vector<int> ans(n);
-
-        for (int i = 0; i < n - 1; i++) {
-            int maxi = -1;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] > maxi) {
-                    maxi = arr[j];
-                }
-            }
-            ans[i] = maxi;
+        int maxright = -1;
+        for(int i = n-1;i>=0;i--){
+            int current = arr[i];
+            ans[i] = maxright;
+            maxright = max(maxright,current);
         }
-
-        ans[n - 1] = -1;
         return ans;
     }
 };
