@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 class Solution {
 public:
     int smallestRepunitDivByK(int k) {
@@ -14,6 +17,24 @@ public:
             }
         }
 
-        return -1; // Should not reach here but safe fallback
+        return -1; // Safe fallback
     }
 };
+
+int main() {
+    Solution sol;
+    int k;
+
+    cout << "Enter value of k: ";
+    cin >> k;
+
+    int result = sol.smallestRepunitDivByK(k);
+
+    if (result == -1) {
+        cout << "No repunit divisible by " << k << endl;
+    } else {
+        cout << "Smallest repunit divisible by " << k << " has length: " << result << endl;
+    }
+
+    return 0;
+}
