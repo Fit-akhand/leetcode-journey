@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int longestBalanced(string s) {
@@ -25,3 +28,13 @@ public:
         return ans;
     }
 };
+
+int main() {
+    string s;
+    cin >> s;
+
+    Solution sol;
+    cout << sol.longestBalanced(s) << endl;
+
+    return 0;
+}
