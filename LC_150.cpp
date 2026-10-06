@@ -74,4 +74,4 @@ int main() {
     cout << "Answer: " << ans << endl;
 
     return 0;
-}
+}LC
